@@ -1,0 +1,5 @@
+hello from print
+hello from writer
+hello from writer
+new string
+hello from swriter
