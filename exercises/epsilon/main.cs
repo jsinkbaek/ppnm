@@ -1,4 +1,5 @@
 using static System.Console;
+using static System.Math;
 class main{
 	static int Main(){
 		maxmin();
@@ -37,7 +38,7 @@ class main{
 		x *= 2;
 
 		float y=1F;
-		while (1F+y!=1F){
+		while ((float)(1F+y)!=1F){
 			y/=2F;}
 		y *= 2F;
 
@@ -75,4 +76,5 @@ class main{
 
 	return 0;
 	}
+
 }

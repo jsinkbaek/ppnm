@@ -6,23 +6,11 @@ My min int i = -2147483648
 i-intmin = 0
 Double precision epsilon = 2.22044604925031E-16
 System.Math.Pow(2,-52) = 2.22044604925031E-16
-Single precision epsilon = 2.220446E-16
+Single precision epsilon = 1.192093E-07
 System.Math.Pow(2,-23) = 1.192093E-07
-i==max
-i==1
 max=int.MaxValue/8,  float_sum_up=15.40368,  float_sum_down=17.80792
-i==max
-i==1
 max=int.MaxValue/7,  float_sum_up=15.40368,  float_sum_down=17.80792
-i==max
-i==1
 max=int.MaxValue/6,  float_sum_up=15.40368,  float_sum_down=17.80792
-i==max
-i==1
 max=int.MaxValue/5,  float_sum_up=15.40368,  float_sum_down=17.80792
-i==max
-i==1
 max=int.MaxValue/4,  float_sum_up=15.40368,  float_sum_down=17.80792
-i==max
-i==1
 max=int.MaxValue/3,  float_sum_up=15.40368,  float_sum_down=17.80792
