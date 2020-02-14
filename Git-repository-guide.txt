@@ -1,0 +1,34 @@
+### Lavet af Andreas Nygaard (2018)
+
+“”” Guide til at foretage ændringer i et git repository med terminal “””
+
+# Klon repository til computeren med kommandoen
+		git clone <SSH-URL> <directory>
+
+# tilføj filer til mappen enten i computerens UI eller med 
+# terminal-kommandoer som 
+		move <file> <directory>
+
+# Herefter tilføjes de allesammen til din branch ved først
+# at placere dig i branch-mappen med kommandoen
+		cd <directory_repo>
+
+# filer og mapper tilføjes ved kommandoen
+		git add -f .
+
+# og de fjernes ved (option -r for directory)
+		git rm --cached <file>
+
+# Vær sikker på at din branch indeholder nyeste ændringer
+# i repository ved at bruge følgende i branch-mappen
+		git pull origin
+
+# Fjerner .DS_Store filer fra repo
+		find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+# Gem nu ændringerne i branchen
+		git commit -m ‘beskrivelse af ændringen’
+
+# Upload dine ændringer til repository fra branchen med
+		git push origin
+		
