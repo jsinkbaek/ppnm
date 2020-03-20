@@ -1,0 +1,22 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphicx}
+
+\title{An example of using \LaTeX and Gnuplot: The exponential function}
+\author{J.S.~Thomsen}
+\begin{document}
+\maketitle
+The exponential function can be defined as a solution to the differential equation
+\begin{equation}\label{diff-eq}
+	y(x) = y'(x) \;.
+\end{equation}
+with the boundary condition
+\begin{equation}\label{bound-cond}
+	y(0) = 1 \;.
+\end{equation}
+
+\begin{figure}[h]
+	\input{plot-exp.tex}
+	\caption{Illustration of the exp function}
+\end{figure}
+
+\end{document}
