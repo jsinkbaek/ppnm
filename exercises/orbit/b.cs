@@ -32,6 +32,7 @@ public class bcl
 		
 			WriteLine($"Output given in file b1out");
 		}
+
 		return 0;
 	}
 	
@@ -63,7 +64,6 @@ public class bcl
 			WriteLine($"Output given in file b2out");
 		}
 
-	
 		return 0;
 	}
 
