@@ -9,7 +9,7 @@ public class linalg
 		matrix r;
 
 		public matrix Q{get{return q;}}
-		public matrix R{get{return q;}}
+		public matrix R{get{return r;}}
 		
 		public qr_decomp_GS(matrix A)
 		{
@@ -19,12 +19,12 @@ public class linalg
 			q = A.copy();
 			r = new matrix(m, m);
 			vector qi = new vector(n);
-			vector qj = new vector(m);
+			vector qj = new vector(n);
 
 			for (int i=0; i<m; i++)
 			{
 				qi = q.col_toVector(i);	
-				r[i, i] = qi.norm();
+				r[i, i] = Sqrt(qi.dot(qi));
 
 				for (int k=0; k<n; k++)
 				{
@@ -47,7 +47,7 @@ public class linalg
 	
 		public vector solve(vector b)
 		{// in place replacement of c with x
-			vector x = q.Transpose()*b;
+			vector x = q.T*b;
 			backsubstitution(r, x);
 			return x;
 		}
@@ -59,7 +59,7 @@ public class linalg
 			for (int i = y.size-2; i >= 0; i--)
 			{
 				double sum = 0;
-				for (int k = i+1; k < x.size; k++)
+				for (int k = i+1; k < y.size; k++)
 				{
 					sum += U[i, k] * y[k];
 				}

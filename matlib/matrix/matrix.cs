@@ -200,7 +200,7 @@ public bool equals(matrix B,double eps=1e-6){
 	return true;
 }
 
-public static vector col_toVector(int j})
+public vector col_toVector(int j)
 {
 	vector v = new vector(this.size1);
 	for (int i = 0; i < this.size1; i++)
