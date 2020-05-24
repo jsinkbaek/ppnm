@@ -3,6 +3,7 @@ using static System.Math;
 
 public class linalg
 {
+
 	public class qr_decomp_GS
 	{
 		matrix q;
@@ -67,6 +68,21 @@ public class linalg
 				y[i] = (y[i] - sum) / U[i, i];
 			}
 
+		}
+
+		public matrix inverse()
+		{
+			matrix I = new matrix(q.size2, q.size2);
+			I.set_identity();
+			matrix B = new matrix(q.size1, q.size2);
+			for (int i=0; i < q.size2; i++)
+			{
+				vector ei = I.col_toVector(i);
+				vector x = solve(ei);
+
+				for (int j=0; j<B.size1; j++) {B[j, i] = x[j];}
+			}	
+			return B;
 		}
 
 	}
