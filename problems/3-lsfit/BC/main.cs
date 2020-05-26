@@ -25,21 +25,22 @@ class main
 		}
 
 		lsfit fit1 = new lsfit(xs, lny, lnerr, lnexp);
-		
+		WriteLine("Trying to fit y=a*Exp(-lambda*x) on log form ln(y) = ln(a)-lambda*x \n");
 		vector c = fit1.C;
 		vector cerr = fit1.Cerr;
 		matrix covar = fit1.Covar;
 
-		c.print("c = ");
-		covar.print("covar = ");
+		c.print("c =  ln(a)   lambda   =  ");
+		covar.print("covariance matrix = ");
 		double a = Exp(c[0]);
 		double aerr = Exp(c[0]) * cerr[0];
 		double ml = 1/c[1];
 		double hlerr = cerr[1] * Log(2) / ((-c[1])*(-c[1]));
 		double hl = Log(2) * ml;
-		WriteLine("a = {0} +- {1}", a, aerr);
-		WriteLine("lambda = {0} +- {1}", c[1], cerr[1]);
-		WriteLine("half life = {0} +- {1}", hl, hlerr);
+		WriteLine("a = {0:f6} +- {1:f6}", a, aerr);
+		WriteLine("lambda = {0:f6} +- {1:f6}\n", c[1], cerr[1]);
+		WriteLine("Lambda converted to half life, error found by simplified propagation formula");
+		WriteLine("half life = {0:f6} +- {1:f6}", hl, hlerr);
 		
 		Func<double, double> expfun = x => a * Exp(-c[1]*x);
 		Func<double, double> expu = x => (a+aerr) * Exp(-(c[1]-cerr[1])*x);
