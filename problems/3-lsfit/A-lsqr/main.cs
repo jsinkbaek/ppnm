@@ -13,6 +13,7 @@ class main
 		double[] t = {1, 2, 3, 4, 6, 9, 10, 13};
 		double[] yt = {117, 100, 88, 72, 53, 29.5, 25.2, 15.2};
 		vector xs = new vector(t);
+		vector ys = new vector(yt);
 		vector lny = new vector(yt.Length);
 		vector yerr = new vector(yt.Length);
 		vector lnerr = new vector(yt.Length);
@@ -27,10 +28,13 @@ class main
 		lsfit fit1 = new lsfit(xs, lny, lnerr, lnexp);
 		
 		vector c = fit1.C;
-
-		c.print("c = ");
-		WriteLine("a = {0}", Exp(c[0]));
-		WriteLine("mean lifetime = {0}", 1/c[1]);
+		WriteLine("\n Data:");
+		xs.print("time in days = ");
+		ys.print("y = ");
+		WriteLine("\n Attempting to make fit y=a*Exp(-lambda*t) by using ln(y)=ln(a)-lambda*t");
+		c.print("c =   ln(a)   lambda   = ");
+		WriteLine("a = {0:f6}", Exp(c[0]));
+		WriteLine("half life = {0:f6}\n", Log(2)*1/c[1]);
 		
 		Func<double, double> fit1fun = x => c[0]*lnexp[0](x) + c[1]*lnexp[1](x);
 
