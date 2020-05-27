@@ -1,0 +1,10 @@
+
+ Data:
+time in days =          1          2          3          4          6          9         10         13 
+y =        117        100         88         72         53       29.5       25.2       15.2 
+
+ Attempting to make fit y=a*Exp(-lambda*t) by using ln(y)=ln(a)-lambda*t
+c =   ln(a)   lambda   =       4.96      0.173 
+a = 143.208234
+half life = 4.013286
+

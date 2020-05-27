@@ -1,0 +1,11 @@
+Trying to fit y=a*Exp(-lambda*x) on log form ln(y) = ln(a)-lambda*x 
+
+c =  ln(a)   lambda   =        4.96      0.173 
+covariance matrix = 
+   0.00102   0.000117 
+  0.000117   1.95e-05 
+a = 143.208234 +- 4.563885
+lambda = 0.172713 +- 0.004419
+
+Lambda converted to half life, error found by simplified propagation formula
+half life = 4.013286 +- 0.102693
