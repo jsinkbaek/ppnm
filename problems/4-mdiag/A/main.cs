@@ -47,10 +47,10 @@ class main
 		matrix Dh = h_jac.D;
 		vector eigvals = h_jac.Eigvals;
 
-		H.print("\n H = ");
-		WriteLine("\n Jacobi diagonalisation H=V*D*V.T");
-		Vh.print("\n V = ");
-		Dh.print("\n D = ");
+		//H.print("\n H = ");
+		//WriteLine("\n Jacobi diagonalisation H=V*D*V.T");
+		//Vh.print("\n V = ");
+		//Dh.print("\n D = ");
 		WriteLine("\n");
 
 		// Calculate analytic energies and compare
