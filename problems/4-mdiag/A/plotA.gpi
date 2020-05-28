@@ -2,12 +2,15 @@ set term svg font ",16" background rgb "white" size 900,500
 set title "Eigenfunctions for particle in box"
 set key rmargin
 set xlabel "unitless x"
-set ylabel "u(x)"
+set yrange [-1:1]
+set ylabel "psi(x) normalized by 1/Sqrt(2*s)  (s is numerical step)"
 set out "PlotA.svg"
 
-plot "out.fun.txt" index 0 with lines lt -1 title "analytic functions"\
-	, "out.fun.txt" index 1 with lines lt -1 notitle\
-	, "out.fun.txt" index 2 with lines lt -1 notitle\
-	, "out.fun.txt" index 3 with lines title "numeric n=0"\
-	, "out.fun.txt" index 4 with lines title "numeric n=1"\
-	, "out.fun.txt" index 5 with lines title "numeric n=2"
+plot "out.fun.txt" index 0 with lines lt -1 dt 2 lw 2 title "analytic functions"\
+	, "out.fun.txt" index 1 with lines lt -1 dt 2 lw 2 notitle\
+	, "out.fun.txt" index 2 with lines lt -1 dt 2 lw 2 notitle\
+	, "out.fun.txt" index 3 with lines lt -1 dt 2 lw 2 notitle\
+	, "out.fun.txt" index 4 with lines title "numeric n=0"\
+	, "out.fun.txt" index 5 with lines title "numeric n=1"\
+	, "out.fun.txt" index 6 with lines title "numeric n=2"\
+	, "out.fun.txt" index 7 with lines title "numeric n=3"

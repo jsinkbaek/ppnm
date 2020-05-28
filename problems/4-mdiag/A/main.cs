@@ -29,7 +29,7 @@ class main
 
 		WriteLine("\n\n Problem A2: Quantum Particle in box \n");
 		
-		n = 20;
+		n = 99;
 		double s=1.0/(n+1);
 		matrix H = new matrix(n, n);
 		for (int i=0; i<n-1; i++)
@@ -65,40 +65,68 @@ class main
 		var datw = new System.IO.StreamWriter("out.fun.txt");
 		// Write analytic function to file
 		//double a = 0.149;
-		double a=0.31;
+		//double a=0.141;
+		double a = Sqrt(2*s);
 		int q = 1;
 		Func<double, double> psiev = (x) => a*Sin(q*x*PI);
 		Func<double, double> psiod = (x) => a*Sin(q*x*PI-PI);
-		for (int k=0; k<3; k++)
+		for (int k=0; k<4; k++)
 		{
+			vector psinum = Vh.col_toVector(k);
+			Func<double, double> psi = pick_analytic_func(a, n, q, psinum);
 			datw.WriteLine($"{0} {0}");
-			for (double x=0.02; x<1; x+=0.02)
+			for (double x=0.005; x<1; x+=0.005)
 			{
-				if (k % 2 == 0)
+				datw.WriteLine($"{x} {psi(x)/a}");
+/*				if (k % 2 == 0)
 				{
-					datw.WriteLine($"{x} {psiev(x)}");
+					datw.WriteLine($"{x} {psi(x)}");
 				}
 				else
 				{
 					datw.WriteLine($"{x} {psiod(x)}");
 				}
-			}
+*/			}
 			datw.WriteLine($"{1} {0}\n\n");
 			q++;
 		}	
 		
 		// Write function plot data to file
-		for (int k=0; k<3; k++)
+		for (int k=0; k<4; k++)
 		{
 			datw.WriteLine($"{0} {0}");
 			for (int i=0; i<n; i++)
 			{
-				datw.WriteLine($"{(i+1.0)/(n+1)} {Vh[i, k]}");
+				datw.WriteLine($"{(i+1.0)/(n+1)} {Vh[i, k]/a}");
 			}
 			datw.WriteLine($"{1} {0} \n\n");
 		}
 		datw.Close();
 		return 0;
+	}
+
+	static Func<double, double> pick_analytic_func(double a, int n, int q, vector psinum)
+	{
+		Func<double, double> psi1 = (x) => a*Sin(q*x*PI);
+		Func<double, double> psi2 = (x) => a*Sin(q*x*PI-PI);
+
+		double sum1=0;
+		double sum2=0;
+
+		for (int i=0; i<n; i++)
+		{
+			double s = (i+1.0)/(n+1);
+			sum1 += Abs(psi1(s)-psinum[i]);
+			sum2 += Abs(psi2(s)-psinum[i]);
+		}
+
+		if (sum1 < sum2){return psi1;}
+		else if (sum2 < sum1){return psi2;}
+		else 
+		{
+			WriteLine("Error determining phase for analytic result, sum1={0}, sum2={1}", sum1, sum2);
+			return psi1;
+		}
 	}
 
 }
