@@ -24,7 +24,7 @@ math.dll: $(SRC)
 
 .PHONY:clean
 clean:
-	rm -f *.exe out.*.txt *.dll
+	rm -f *.svg *.exe out.*.txt *.dll
 
 
 
