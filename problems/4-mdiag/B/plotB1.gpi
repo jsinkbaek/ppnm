@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white" size 900,500
+set title "Execution time jacobi cyclic diagonalisation"
+set key rmargin
+set xlabel "size n (symmetric matrix A nxn)"
+set ylabel "Average execution time in milliseconds"
+set out "PlotB1.svg"
+
+plot "out.time.txt" u 1:2 with lines title "data"\
+	, "out.tfun.txt" u 1:2 with lines title "fit y=a+b*x^3"

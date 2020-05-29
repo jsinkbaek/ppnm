@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white" size 900,500
+set title "Execution time jacobi cyclic vs lowest eigenvalue in value-by-value decomposition"
+set key rmargin
+set xlabel "size n (symmetric matrix A nxn)"
+set ylabel "Average execution time in milliseconds"
+set out "PlotB3t.svg"
+
+plot "out.b3time.txt" u 1:2 with lines title "value-by-value"\
+	, "out.b3time.txt" u 1:3 with lines title "cyclic"
