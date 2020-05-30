@@ -1,0 +1,53 @@
+ODE RK12 integration
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+ODE solved in 878 steps
+ODE RK12 integration
+Slacking on tolerances as integration proceeds
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+Bad step at x=0. Step rejected.
+ODE solved in 665 steps
+ODE RK45 integration
+Bad step at x=0.935536589664516. Step rejected.
+Bad step at x=1.10904110130569. Step rejected.
+Bad step at x=1.27357504256971. Step rejected.
+Bad step at x=2.58175538982166. Step rejected.
+Bad step at x=2.75101627550854. Step rejected.
+Bad step at x=2.91232886829132. Step rejected.
+Bad step at x=4.22888893553997. Step rejected.
+Bad step at x=4.39451759089498. Step rejected.
+Bad step at x=5.70033880630417. Step rejected.
+Bad step at x=5.87074709357023. Step rejected.
+Bad step at x=6.03303119056335. Step rejected.
+Bad step at x=7.34692033628967. Step rejected.
+Bad step at x=7.513643422943. Step rejected.
+Bad step at x=8.81860606216753. Step rejected.
+Bad step at x=8.99020541374982. Step rejected.
+Bad step at x=9.15348771812425. Step rejected.
+ODE solved in 74 steps
+ODE RK45 integration
+Bad step at x=0.935536589664516. Step rejected.
+Bad step at x=1.10904110130569. Step rejected.
+Bad step at x=1.27357504256971. Step rejected.
+Bad step at x=2.58175538982166. Step rejected.
+Bad step at x=2.75101627550854. Step rejected.
+Bad step at x=2.91232886829132. Step rejected.
+Bad step at x=4.22888893553997. Step rejected.
+Bad step at x=4.39451759089498. Step rejected.
+Bad step at x=5.70033880630417. Step rejected.
+Bad step at x=5.87074709357023. Step rejected.
+Bad step at x=6.03303119056335. Step rejected.
+Bad step at x=7.34692033628967. Step rejected.
+Bad step at x=7.513643422943. Step rejected.
+Bad step at x=8.81860606216753. Step rejected.
+Bad step at x=8.99020541374982. Step rejected.
+Bad step at x=9.15348771812425. Step rejected.
+ODE solved in 74 steps

@@ -1,0 +1,12 @@
+set term svg font ",16" background rgb "white" size 900,500
+set title "Deviation from Sin(x) for rk integrators, with different tolerance calculations"
+set key rmargin
+set xlabel "x"
+set ylabel "y"
+set logscale y
+set out "PlotAdevi.svg"
+
+plot "out.deviation.txt" index 0 with lines lw 2 title "rk12 tolfactor Sqrt(h/(b-a))"\
+	, "out.deviation.txt" index 2 with lines lw 2 title "rk45 tolfactor Sqrt(h/(b-a))"\
+	, "out.deviation.txt" index 1 with lines dt 2 lw 2 title "rk12 tolfactor Sqrt(h/(b-x))"\
+	, "out.deviation.txt" index 3 with lines dt 2  lw 2 title "rk45 tolfactor Sqrt(h/(b-x))"

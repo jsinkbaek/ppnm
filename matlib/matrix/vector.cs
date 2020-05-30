@@ -31,6 +31,14 @@ public void print(string s="",string format="{0,10:g3} "){
 	System.Console.Write("\n");
 }
 
+public static vector operator+(double a, vector v){
+	vector r=new vector(v.size);
+	for(int i=0;i<r.size;i++)r[i]=a+v[i];
+	return r; }
+
+public static vector operator+(vector v, double a)
+	{return a+v;}
+
 public static vector operator+(vector v, vector u){
 	vector r=new vector(v.size);
 	for(int i=0;i<r.size;i++)r[i]=v[i]+u[i];
@@ -92,5 +100,13 @@ public bool approx(vector o){
 		if(!approx(this[i],o[i]))return false;
 	return true;
 	}
+
+public vector abs() {
+	vector b = new vector(size);
+	for(int i = 0; i < size; i++) {
+		b[i] = Abs(data[i]);
+	}
+	return b;
+}
 
 }//vector

@@ -1,0 +1,3 @@
+Problem 5A. See PlotA.svg for solution.
+Feedback form ODE integrators will be included in out.err.txt
+See PlotAdevi.svg for variation of solutions from Sin(x)
