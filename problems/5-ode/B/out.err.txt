@@ -1,0 +1,25 @@
+ODE RK45 integration
+Bad step at x=70.0131001319404. Step rejected.
+Bad step at x=82.208508627563. Step rejected.
+Bad step at x=97.1078418251543. Step rejected.
+Bad step at x=100.062362114306. Step rejected.
+Bad step at x=125.15447574757. Step rejected.
+Bad step at x=128.366554559849. Step rejected.
+Bad step at x=131.434438770457. Step rejected.
+ODE solved in 222 steps
+ODE RK45 integration
+ODE solved in 43 steps
+ODE RK45 integration
+ODE solved in 120 steps
+ODE RK45 integration
+ODE solved in 17 steps
+ODE RK45 integration
+Bad step at x=145.5. Step rejected.
+Bad step at x=214.889454336919. Step rejected.
+Bad step at x=323.589911853206. Step rejected.
+Bad step at x=343.834359649282. Step rejected.
+Bad step at x=427.346737019906. Step rejected.
+Bad step at x=444.440281892558. Step rejected.
+Bad step at x=461.075625668113. Step rejected.
+Bad step at x=476.763566105617. Step rejected.
+ODE solved in 41 steps

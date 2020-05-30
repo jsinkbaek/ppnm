@@ -1,0 +1,11 @@
+set term svg font ",16" background rgb "white" size 900,500
+set title "Solution to u''=-u with y(0)= (0, 1)"
+set key rmargin
+set xlabel "x"
+set yrange [-1:1]
+set ylabel "y"
+set out "PlotA.svg"
+
+plot sin(x) with lines lt -1 dt 2 lw 2 title "Sin(x)"\
+	, "out.rk12.txt" u 1:2 with lines title "rk12 solution"\
+	, "out.rk45.txt" u 1:2 with lines title "rk45 solution"

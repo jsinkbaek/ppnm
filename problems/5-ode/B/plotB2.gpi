@@ -1,0 +1,13 @@
+set term svg background rgb "white" size 1280,480
+set out "PlotB2.svg"
+set multiplot layout 1,2 title "SIR model (T_r/T_c = 2.5 60 days, T_r/T_c = 0.6 60 days, T_r/T_c = 1.3 480 days)"
+#set title "Solution to u''=-u with y(0)= (0, 1)"
+set xlabel "Days since t0"
+#set logscale y
+
+set key top left box
+plot "out.B2.txt" u 1:3 with lines title "Infected"\
+	, "out.B2.txt" u 1:4 with lines title "Diseased or recovered"
+
+set key bottom left box
+plot "out.B2.txt" u 1:2 with lines title "Susceptible"
