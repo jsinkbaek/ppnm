@@ -54,12 +54,10 @@ public class linalg
 			}
 		}
 
-		private void rot_vbv(matrix A, int evalnum, bool invert)
+		private void rot_vbv(matrix A, int evalnum, bool invert, bool val_by_val=true)
 		{// value by value variation of cyclic routine
 			cond = false;
-			rot(A, invert);
-
-			//for (int i=evalnum; i<d.size; i++) {d[i] = 0.0;}
+			rot(A, invert, val_by_val);
 		}
 
 
@@ -70,7 +68,7 @@ public class linalg
 		}// rotation sweeping cycles
 
 
-		private void rot(matrix A, bool invert=false)
+		private void rot(matrix A, bool invert=false, bool val_by_val=false)
 		{
 			for (q=p+1; q<n; q++)
 			{
@@ -97,11 +95,15 @@ public class linalg
 					
 					// Update rest of matrix elements in upper
 					// off-diagonal
-					for (int i=0; i<p; i++)
-					{
-						double ip=A[i,p], iq=A[i,q];
-						A[i, p] = c*ip - s*iq;
-						A[i, q] = c*iq + s*ip;
+					
+					if (!val_by_val)
+					{// Don't do if calculating vbv, as all the rows above current one are 0
+						for (int i=0; i<p; i++)
+						{
+							double ip=A[i,p], iq=A[i,q];
+							A[i, p] = c*ip - s*iq;
+							A[i, q] = c*iq + s*ip;
+						}
 					}
 					for (int i=p+1; i<q; i++)
 					{
