@@ -23,3 +23,57 @@ Bad step at x=444.440281892558. Step rejected.
 Bad step at x=461.075625668113. Step rejected.
 Bad step at x=476.763566105617. Step rejected.
 ODE solved in 41 steps
+ODE RK45 integration
+ODE solved in 30 steps
+ODE RK45 integration
+ODE solved in 8 steps
+ODE RK45 integration
+ODE solved in 6 steps
+ODE RK45 integration
+ODE solved in 6 steps
+ODE RK45 integration
+ODE solved in 6 steps
+ODE RK45 integration
+ODE solved in 6 steps
+ODE RK45 integration
+ODE solved in 7 steps
+ODE RK45 integration
+Bad step at x=86.3. Step rejected.
+ODE solved in 13 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+Bad step at x=402.7. Step rejected.
+ODE solved in 10 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+Bad step at x=462.7. Step rejected.
+ODE solved in 10 steps
+ODE RK45 integration
+ODE solved in 9 steps
+ODE RK45 integration
+Bad step at x=522.7. Step rejected.
+ODE solved in 10 steps
+ODE RK45 integration
+Bad step at x=552.7. Step rejected.
+ODE solved in 11 steps
+ODE RK45 integration
+Bad step at x=582.7. Step rejected.
+ODE solved in 10 steps
