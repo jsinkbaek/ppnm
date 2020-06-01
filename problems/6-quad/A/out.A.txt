@@ -1,14 +1,33 @@
 Problem A:
 
-First integrate Sqrt(x) on interval [0, 1]
+First integrate Sqrt(x) on interval [0, 1] with o4a
 Using relative and absolute tolerance 1e-6
 quad.o4a estimates integral = 0.666666679685227
 analytical value of integral is = 0.666666666666667
 error on estimate = 5.6174172712469E-07
 deviation from analytic = -1.30185600077937E-08
+amount of calls = 547
+
+Same integral using o8a
+Using relative and absolute tolerance 1e-6
+quad.o4a estimates integral = 0.66666700749988
+analytical value of integral is = 0.666666666666667
+error on estimate = 6.56114529075005E-08
+deviation from analytic = -3.40833213208214E-07
+amount of calls = 53
+
+-----------------------------------------------------
 
 Second integrate 4*Sqrt(1-x*x) on interval [0, 1]
 quad.o4a estimates integral = 3.14159265769177
 analytical value of integral is 3.14159265358979
 error on estimate = 8.43106021819808E-07
 deviation from analytic = -4.10197920075461E-09
+amount of calls = 1259
+
+same integral using o8a
+quad.o4a estimates integral = 3.14159296134802
+analytical value of integral is 3.14159265358979
+error on estimate = 3.26163745483235E-07
+deviation from analytic = -3.07758223350163E-07
+amount of calls = 76

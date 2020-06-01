@@ -2,11 +2,12 @@ using System;
 using static System.Console;
 using static System.Math;
 using static System.Double;
+using System.Reflection;
 
 public class quad
 {
-	public static (double, double) o4a(
-	//public static double o4a(
+	
+	public static (double, double, int) o4a(
 			Func<double, double> f,	// function to integrate
 			double a,		// start-point
 			double b,		// end-point
@@ -27,7 +28,31 @@ public class quad
 	}
 
 
-	public static (double, double) oga(
+	public static (double, double, int) o8a(
+			Func<double, double> f,
+			double a,
+			double b,
+			double acc=1e-6,
+			double eps=1e-6,
+			int nrecs=0,
+			int limit=30
+			)
+	{// open 8-point adaptive integrator with reuse of points
+		vector w = new vector(new double[] {4738.0/19845, -59.0/567, 5869.0/13230, -74.0/945,
+						    -74.0/945, 5869.0/13230, -59.0/567, 4738.0/19845});
+		vector v = new vector(new double[] {208.0/945, -7.0/135, 209.0/630, 0,
+						    0, 209.0/630, -7.0/135, 208.0/945});
+		vector xi = new vector(new double[] {1.0/12, 2.0/12, 4.0/12, 5.0/12,
+						     7.0/12, 8.0/12, 10.0/12, 11.0/12});
+		vector fi = new vector(new double[] {NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN});
+		int[] calc = new int[] {0, 3, 4, 7};
+		int[] mids = new int[] {1, 2, 5, 6};
+
+		return oga(f, a, b, w, v, xi, fi, calc, mids, acc, eps, nrecs, limit);
+	}
+
+
+	public static (double, double, int) oga(
 	//public static double oga(
 			Func<double, double> f, 	// function to integrate
 			double a,			// start-point
@@ -38,14 +63,16 @@ public class quad
 			vector fi,			// points
 			int[] calc,			// index of points to calculate every time
 			int[] mids,			// index of midpoints that only should be calculated once
-			double acc=1e-6,		// accuracy goal
-			double eps=1e-6,		// relative accuracy goal
-			int nrecs=0,			// current amount of recursions
-			int limit=30			// upper limit on number of recursions
+			double acc,			// accuracy goal
+			double eps,			// relative accuracy goal
+			int nrecs,			// current amount of recursions
+			int limit,			// upper limit on number of recursions
+			int ncalls=0			// total amount of method calls
 			)
 	{// open general point adaptive integrator, with reuse of points
 		double h = b - a;
 		double sqrt2 = Sqrt(2);
+		ncalls++;
 		
 		for (int i=0; i<calc.Length; i++)
 		{// recalculate outer points
@@ -72,13 +99,13 @@ public class quad
 		if (error < tolerance)
 		{
 			//return integral;
-			return (integral, error);
+			return (integral, error, ncalls);
 		}
 		else if (++nrecs > limit)
 		{
 			Error.WriteLine($"oga: nrec>{limit}, a={a}, b={b}");
 			//return integral;
-			return (integral, error);
+			return (integral, error, ncalls);
 		}
 		else
 		{// split interval in middel and evaluate each half individually, reusing points as midpoints
@@ -90,17 +117,17 @@ public class quad
 			}
 			//return oga(f, a, (a+b)/2, w, v, xi, fi1, calc, mids, acc/sqrt2, eps, nrecs, limit)
 			//	+ oga(f, (a+b)/2, b, w, v, xi, fi2, calc, mids, acc/sqrt2, eps, nrecs, limit);
-			(double itg1, double err1) = oga(f, a, (a+b)/2, w, v, xi, fi1, calc, mids, 
-								     acc/sqrt2, eps, nrecs, limit);
-			(double itg2, double err2) = oga(f, (a+b)/2, b, w, v, xi, fi2, calc, mids, 
-								     acc/sqrt2, eps, nrecs, limit);
+			(double itg1, double err1, int nc1) = oga(f, a, (a+b)/2, w, v, xi, fi1, calc, mids, 
+								     acc/sqrt2, eps, nrecs, limit, ncalls);
+			(double itg2, double err2, int nc2) = oga(f, (a+b)/2, b, w, v, xi, fi2, calc, mids, 
+								     acc/sqrt2, eps, nrecs, limit, ncalls);
 
 			// Add results
 			integral = itg1 + itg2;
 			error = Sqrt(Pow(err1, 2) + Pow(err2, 2));
-			return (integral, error);
+			ncalls = nc1 + nc2;
+			return (integral, error, ncalls);
 		}
-
 
 	}// open general point adaptive integrator
 
