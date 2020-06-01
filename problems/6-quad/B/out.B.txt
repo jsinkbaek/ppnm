@@ -1,0 +1,72 @@
+
+-------------------------------------
+-------------------------------------
+
+Problem B:
+
+
+Test Clenshaw-Curtis variable transformation
+
+Integrating 1/Sqrt(x). acc:1e-6. eps:1e-6
+Without any transformation:
+Result:                            1.99999316162241
+Analytical result:                 2
+Deviation:                         -6.83837758730377E-06
+Estimated error:     		   1.05596462145748E-06
+Integrator calls:      		   526
+
+With the Clenshaw Curtis transformation:
+Result:                            1.99999993677137
+Analytical result:                 2
+Deviation:                         -6.3228631441703E-08
+Estimated error:       		   2.58863160396139E-06
+Integrator calls:	           1
+
+In comparison, the matlib o8av rutine:
+Result:				   2.00000040903529
+Deviation:                         4.09035287418646E-07
+Integrator calls:	           3
+
+--------------------------------------------------------------
+
+Integrating Log(x)/Sqrt(x). acc:1e-5. eps:1e-6
+Without any transformation:
+Result:                            -3.99982084894856
+Analytical result:                 -4
+Deviation:                         0.000179151051444393
+Estimated error:	           6.88889032042074E-06
+Integrator calls:      		   526
+
+With the Clenshaw Curtis transformation:
+Result:                            -3.99999870999452
+Analytical result:                 -4
+Deviation:                         1.2900054811027E-06
+Estimated error:	           3.2281323218743E-06
+Integrator calls:	           298
+
+In comparison, the matlib o8av rutine:
+Result:				   -3.99999947510675
+Deviation:                         5.24893249753688E-07
+Integrator calls:	           41
+
+--------------------------------------------------------------
+
+Integrating 4*Sqrt(1-x*x). acc:1e-14. eps:1e-14
+Without any transformation:
+Result:                            3.1415926535897900
+Analytical result:                 3.1415926535897900
+Deviation:                         0
+Estimated error:     		   4.84488369804473E-15
+Integrator calls:      		   2653
+
+With the Clenshaw Curtis transformation:
+Result:                            3.1415926535897900
+Analytical result:                 3.1415926535897900
+Deviation:                         0
+Estimated error:       		   8.28475129427289E-15
+Integrator calls:	           511
+
+In comparison, the matlib o8av rutine:
+Result:				   3.1415926535897900
+Deviation:                         4.44089209850063E-16
+Integrator calls:	           131

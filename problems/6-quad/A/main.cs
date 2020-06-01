@@ -34,7 +34,7 @@ class main
 
 		// Second integration
 		WriteLine("\n-----------------------------------------------------");
-		WriteLine("\nSecond integrate 4*Sqrt(1-x*x) on interval [0, 1]");
+		WriteLine("\nSecond integrate 4*Sqrt(1-x*x) on interval [0, 1] with o4a");
 		// Function
 		Func<double, double> f2 = (x) => 4*Sqrt(1-x*x);
 		// quad.o4a call

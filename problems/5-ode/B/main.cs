@@ -115,8 +115,8 @@ class main
 
 		// Fourth model - 60 days unhindered, 60 days harshly limited increase stepwise to unhindered
 		WriteLine("\nFourth model uses unhindered 60d, 2.5 infections pr infected.");
-		WriteLine("Followed by 60d harshly limited, 0.6 pr infected.");
-		WriteLine("Followed by 60d 1 per infected, and then periodical 0.1 increase every 30d until 2.4.");
+		WriteLine("Followed by smooth transition to 60d harshly limited, 0.6 pr infected.");
+		WriteLine("Followed by smoot transition to 60d 1 per infected, and then periodical 0.1 increase every 30d until 2.4.");
 		WriteLine("See plot PlotB3.svg for it.");
 		var sirw3 = new System.IO.StreamWriter("out.B3.txt");
 		// Startpoints

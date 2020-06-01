@@ -13,6 +13,6 @@ This is followed by 480 days of semi-limited infection, 1.3 per infected.
 See plots in PlotB2.svg
 
 Fourth model uses unhindered 60d, 2.5 infections pr infected.
-Followed by 60d harshly limited, 0.6 pr infected.
-Followed by 60d 1 per infected, and then periodical 0.1 increase every 30d until 2.4.
+Followed by smooth transition to 60d harshly limited, 0.6 pr infected.
+Followed by smoot transition to 60d 1 per infected, and then periodical 0.1 increase every 30d until 2.4.
 See plot PlotB3.svg for it.

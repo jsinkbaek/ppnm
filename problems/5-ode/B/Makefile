@@ -16,7 +16,7 @@ PlotB3.svg: plotB3.gpi out.B3.txt
 	gnuplot $<
 
 out.B.txt out.B0.txt out.B1.txt out.B2.txt: main.exe
-	mono $< 1> out.A.txt 2> out.err.txt && cat out.A.txt
+	mono $< 1> out.B.txt 2> out.err.txt && cat out.B.txt
 
 main.exe: main.cs math.dll
 	csc -out:$@ -reference:math.dll $<

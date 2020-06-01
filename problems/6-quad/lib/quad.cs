@@ -14,7 +14,8 @@ public class quad
 			double acc=1e-6,	// global accuracy goal
 			double eps=1e-6,	// relative accuracy goal
 			int nrecs=0,		// current amount of recursions
-			int limit=30		// upper limit on number of recursions
+			int limit=30,		// upper limit on number of recursions
+			string SubstitutionType="regular"	// indicates if known substitution should be performed
 			)
 	{// open 4 point adaptive trapeziodal quadrature
 		vector w = new vector(new double[] {2.0/6, 1.0/6, 1.0/6, 2.0/6}); // weight for higher order
@@ -23,6 +24,8 @@ public class quad
 		vector fi = new vector(new double[] {NaN, NaN, NaN, NaN}); // the two middle ones will be midpoints
 		int[] calc = new int[] {0, 3};	// index of points to recalculate every time
 		int[] mids = new int[] {1, 2};	// index of points to reuse
+		
+		(f, a, b) = substitution_control(SubstitutionType, f, a, b);
 		
 		return oga(f, a, b, w, v, xi, fi, calc, mids, acc, eps, nrecs, limit);
 	}
@@ -35,7 +38,8 @@ public class quad
 			double acc=1e-6,
 			double eps=1e-6,
 			int nrecs=0,
-			int limit=30
+			int limit=30,
+			string SubstitutionType="regular"
 			)
 	{// open 8-point adaptive integrator with reuse of points
 		vector w = new vector(new double[] {4738.0/19845, -59.0/567, 5869.0/13230, -74.0/945,
@@ -48,11 +52,13 @@ public class quad
 		int[] calc = new int[] {0, 3, 4, 7};
 		int[] mids = new int[] {1, 2, 5, 6};
 
+		(f, a, b) = substitution_control(SubstitutionType, f, a, b);
+
 		return oga(f, a, b, w, v, xi, fi, calc, mids, acc, eps, nrecs, limit);
 	}
 
 
-	public static (double, double, int) oga(
+	static (double, double, int) oga(
 	//public static double oga(
 			Func<double, double> f, 	// function to integrate
 			double a,			// start-point
@@ -103,7 +109,7 @@ public class quad
 		}
 		else if (++nrecs > limit)
 		{
-			Error.WriteLine($"oga: nrec>{limit}, a={a}, b={b}");
+			Error.WriteLine($"oga: nrec>{limit}, a={a}, b={b}, f(a)={f(a)}, f(b)={f(b)}");
 			//return integral;
 			return (integral, error, ncalls);
 		}
@@ -130,5 +136,51 @@ public class quad
 		}
 
 	}// open general point adaptive integrator
+
+
+	static (Func<double, double>, double, double) substitution_control(
+			string SubstitutionType,
+			Func<double, double> f, 
+			double a, double b
+			)
+	{// Controls which substitution to do
+		string stype = SubstitutionType;
+		
+		if (Equals(stype, "regular"))
+		{
+			return (f, a, b);
+		}
+		else if (Equals(stype, "clenshaw-curtis"))
+		{
+			return clenshaw_curtis(f, a, b);
+		}
+		else
+		{
+			Error.WriteLine("Unknown SubstitutionType, assuming \"regular\"");
+			return (f, a, b);
+		}		
+	}
+
+	
+	/*static (Func<double, double>, double, double) clenshaw_curtis(Func<double, double> f, double a, double b)
+	{// Perform Clenshaw-Curtis substitution
+		// Rescale to be from -1 to 1
+		// u(a) = -1, u(b) = 1, u(x) = alpha*x + b
+		Func<double, double> u = (x) => x*(b-a)/2 - (b+a)/2;
+		// Rescale f
+		Func<double, double> fu = (x) => f(u(x)) * (b-a)/2;
+
+		// Make Clenshaw-Curtis transformation:
+		Func<double, double> fcc = (theta) => fu(Cos(theta))*Sin(theta);	
+	
+		return (fcc, 0.0, PI);
+	}*/
+
+	static (Func<double, double>, double, double) clenshaw_curtis(Func<double, double> f, double a, double b)
+	{// Perform Clenshaw-Curtis substitution
+		// u(a)=-1, u(b)=1
+		Func<double, double> fn = (x) => f((a+b)/2+(b-a)*Cos(x)/2) * Sin(x)*(b-a)/2;
+		return (fn, 0, PI);
+	}
 
 }
