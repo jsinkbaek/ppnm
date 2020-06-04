@@ -1,0 +1,23 @@
+Problem 7A:
+
+Looking for root of Sin(x)² close to 1.500:
+Accuracy goal eps:			0.001
+Analytical root:			3.14159265358979
+Found root:				-6.2661404100777
+Deviation:				-9.40773306366749
+Value of function at root:		0.000290500382697305
+
+Looking for root of equation system
+(x0+x1^2+x2^3, x0+x1-5, x0*x2-2) near (-0.1, 4.0, -1.0):
+Accuracy goal eps:		     0.001
+Analytical root:		    -0.636       5.64      -3.15 
+Found root:			    -0.636       5.64      -3.15 
+Deviation:			  4.82e-07  -4.82e-07   4.32e-06 
+Value of function at root:	  -6.7e-08          0   3.18e-09 
+
+Looking for extremus of Rosenbrock's valley function near (1.4, 0.5):
+Accuracy goal eps:		     0.001
+Analytical root:		         1          1 
+Found root:			         1          1 
+Deviation:			  2.79e-06   5.46e-06 
+Value of function at root:	 -3.85e-05  -2.21e-05 

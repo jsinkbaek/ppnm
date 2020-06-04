@@ -77,6 +77,14 @@ public double norm(){
 	return meanabs*sum;
 	}
 
+public double norm2()
+{// euclidean norm2
+	double res=0;
+	for (int i=0; i<this.size; i++)
+		res += this[i]*this[i];
+	return Sqrt(res);
+}
+
 public vector copy(){
 	vector b=new vector(this.size);
 	for(int i=0;i<this.size;i++)b[i]=this[i];

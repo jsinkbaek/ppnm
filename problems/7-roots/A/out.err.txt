@@ -1,0 +1,18 @@
+rootf.newton returning x, a condition is satisfied
+f(x).norm2()		0.000290500382697305
+eps			0.001
+lam			1
+dx			1E-07
+
+rootf.newton returning x, a condition is satisfied
+f(x).norm2()		6.70560675022096E-08
+eps			0.001
+lam			1
+dx			1E-07
+
+rootf.newton returning x, a condition is satisfied
+f(x).norm2()		4.44090660245859E-05
+eps			0.001
+lam			1
+dx			1E-07
+
