@@ -6,7 +6,8 @@ class main
 {
 	static void Main()
 	{
-		WriteLine("Problem 7A:\n");
+		WriteLine("\n----------------------------------------------------------------");
+		WriteLine("\nProblem 7A:\n");
 		
 		// Rootfinding of sin²(x)=0
 		Func<vector, vector> sin2 = (x) => new vector(Sin(x[0])*Sin(x[0]));
@@ -61,10 +62,14 @@ class main
 		vector res3 = new vector(1.0, 1.0);
 		
 		WriteLine($"\nLooking for extremus of Rosenbrock's valley function near (1.4, 0.5):");
+		WriteLine($"Function is f(x,y) = (1-x)² + 100*(y-x²)²");
 		WriteLine($"Accuracy goal eps:		     {eps3}");
 		res3.print("Analytical root:		");
 		groot3.print("Found root:			");
 		(groot3-res3).print("Deviation:			");
 		fr(groot3).print("Value of function at root:	");
+
+		WriteLine("\n----------------------------------------------------------------\n");
+
 	}
 }

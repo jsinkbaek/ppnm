@@ -1,0 +1,174 @@
+ODE RK45 integration
+Bad step at x=3.37740511701401. Step rejected.
+Bad step at x=3.71546712769406. Step rejected.
+Bad step at x=4.03341053538607. Step rejected.
+Bad step at x=4.33567703851621. Step rejected.
+ODE solved in 126 steps
+ODE RK45 integration
+Bad step at x=3.37740517542717. Step rejected.
+Bad step at x=3.71546708727967. Step rejected.
+Bad step at x=4.03341042936996. Step rejected.
+Bad step at x=4.33567686662323. Step rejected.
+ODE solved in 126 steps
+ODE RK45 integration
+Bad step at x=3.56336755321115. Step rejected.
+Bad step at x=3.84662769029634. Step rejected.
+Bad step at x=4.11202555340983. Step rejected.
+Bad step at x=4.36200733183355. Step rejected.
+Bad step at x=4.59906136984298. Step rejected.
+ODE solved in 141 steps
+ODE RK45 integration
+Bad step at x=3.32678724038788. Step rejected.
+Bad step at x=3.69537687249777. Step rejected.
+Bad step at x=5.37306005175437. Step rejected.
+Bad step at x=5.65541873910347. Step rejected.
+Bad step at x=5.91971539109922. Step rejected.
+Bad step at x=6.17002532352955. Step rejected.
+ODE solved in 131 steps
+ODE RK45 integration
+Bad step at x=3.3576550008953. Step rejected.
+Bad step at x=3.75103524617408. Step rejected.
+Bad step at x=4.0990624351515. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.3576550008953. Step rejected.
+Bad step at x=3.75103524617408. Step rejected.
+Bad step at x=4.0990624351515. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.3576551261792. Step rejected.
+Bad step at x=3.75103484907062. Step rejected.
+Bad step at x=4.09906163523376. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.34236906567571. Step rejected.
+Bad step at x=3.72157005778566. Step rejected.
+Bad step at x=6.65514144571121. Step rejected.
+Bad step at x=6.97354749988605. Step rejected.
+Bad step at x=7.26816599850078. Step rejected.
+Bad step at x=7.5449428846955. Step rejected.
+Bad step at x=7.80693860301598. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.34236906567571. Step rejected.
+Bad step at x=3.72157005778566. Step rejected.
+Bad step at x=6.65514144571121. Step rejected.
+Bad step at x=6.97354749988605. Step rejected.
+Bad step at x=7.26816599850078. Step rejected.
+Bad step at x=7.5449428846955. Step rejected.
+Bad step at x=7.80693860301598. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.34236921484607. Step rejected.
+Bad step at x=3.72157034987482. Step rejected.
+Bad step at x=6.65514974645606. Step rejected.
+Bad step at x=6.97355900009019. Step rejected.
+Bad step at x=7.26817992340829. Step rejected.
+Bad step at x=7.54495883452583. Step rejected.
+Bad step at x=7.80695628278299. Step rejected.
+ODE solved in 125 steps
+ODE RK45 integration
+Bad step at x=3.34531035238324. Step rejected.
+Bad step at x=8.3410247029529. Step rejected.
+Bad step at x=8.78348768305383. Step rejected.
+Bad step at x=9.19347941530607. Step rejected.
+Bad step at x=9.56447160428779. Step rejected.
+Bad step at x=9.9066557515227. Step rejected.
+Bad step at x=10.2251979199192. Step rejected.
+Bad step at x=10.5237852716366. Step rejected.
+Bad step at x=10.8052495606292. Step rejected.
+Bad step at x=11.071864295043. Step rejected.
+ODE solved in 114 steps
+ODE RK45 integration
+Bad step at x=3.34531035238324. Step rejected.
+Bad step at x=8.3410247029529. Step rejected.
+Bad step at x=8.78348768305383. Step rejected.
+Bad step at x=9.19347941530607. Step rejected.
+Bad step at x=9.56447160428779. Step rejected.
+Bad step at x=9.9066557515227. Step rejected.
+Bad step at x=10.2251979199192. Step rejected.
+Bad step at x=10.5237852716366. Step rejected.
+Bad step at x=10.8052495606292. Step rejected.
+Bad step at x=11.071864295043. Step rejected.
+ODE solved in 114 steps
+ODE RK45 integration
+Bad step at x=3.34531049786109. Step rejected.
+Bad step at x=8.3411566758341. Step rejected.
+Bad step at x=8.78370639727077. Step rejected.
+Bad step at x=9.19379686021998. Step rejected.
+Bad step at x=9.5648625475025. Step rejected.
+Bad step at x=9.90710713069558. Step rejected.
+Bad step at x=10.2257002879219. Step rejected.
+Bad step at x=10.524331300369. Step rejected.
+Bad step at x=10.8058333323015. Step rejected.
+Bad step at x=11.0724809070614. Step rejected.
+ODE solved in 114 steps
+ODE RK45 integration
+Bad step at x=3.34543444510877. Step rejected.
+Bad step at x=12.0673011010669. Step rejected.
+Bad step at x=12.9150863615396. Step rejected.
+Bad step at x=13.6296984459244. Step rejected.
+Bad step at x=14.2322244724548. Step rejected.
+Bad step at x=14.7586982620855. Step rejected.
+Bad step at x=15.2276995156242. Step rejected.
+Bad step at x=15.6513416737992. Step rejected.
+Bad step at x=16.0381653376123. Step rejected.
+Bad step at x=16.394486253559. Step rejected.
+Bad step at x=16.7251377886975. Step rejected.
+Bad step at x=17.0339194435064. Step rejected.
+Bad step at x=17.3238844338004. Step rejected.
+Bad step at x=17.5975321978078. Step rejected.
+Bad step at x=17.8569416060353. Step rejected.
+ODE solved in 87 steps
+ODE RK45 integration
+Bad step at x=3.34543444510877. Step rejected.
+Bad step at x=12.0673011010669. Step rejected.
+Bad step at x=12.9150863615396. Step rejected.
+Bad step at x=13.6296984459244. Step rejected.
+Bad step at x=14.2322244724548. Step rejected.
+Bad step at x=14.7586982620855. Step rejected.
+Bad step at x=15.2276995156242. Step rejected.
+Bad step at x=15.6513416737992. Step rejected.
+Bad step at x=16.0381653376123. Step rejected.
+Bad step at x=16.394486253559. Step rejected.
+Bad step at x=16.7251377886975. Step rejected.
+Bad step at x=17.0339194435064. Step rejected.
+Bad step at x=17.3238844338004. Step rejected.
+Bad step at x=17.5975321978078. Step rejected.
+Bad step at x=17.8569416060353. Step rejected.
+ODE solved in 87 steps
+ODE RK45 integration
+Bad step at x=3.34543459038716. Step rejected.
+Bad step at x=13.0928402952353. Step rejected.
+Bad step at x=13.984813875592. Step rejected.
+Bad step at x=14.7070331966828. Step rejected.
+Bad step at x=15.3176572935131. Step rejected.
+Bad step at x=15.8503136352945. Step rejected.
+Bad step at x=16.3240401890635. Step rejected.
+Bad step at x=16.7513617581022. Step rejected.
+Bad step at x=17.1411035434984. Step rejected.
+Bad step at x=17.4997739436623. Step rejected.
+Bad step at x=17.8323390404936. Step rejected.
+Bad step at x=18.1426920477942. Step rejected.
+Bad step at x=18.4339539954446. Step rejected.
+Bad step at x=18.7086745147495. Step rejected.
+Bad step at x=18.9689704011862. Step rejected.
+ODE solved in 83 steps
+ODE RK45 integration
+Bad step at x=3.34543466482784. Step rejected.
+ODE solved in 55 steps
+ODE RK45 integration
+Bad step at x=3.34543466482784. Step rejected.
+ODE solved in 55 steps
+rootf.newton returning x, a condition is satisfied
+f(x).norm2()		0.000161541912809724
+eps			0.001
+lam			1
+dx			1E-07
+
+ODE RK45 integration
+Bad step at x=3.34543466482784. Step rejected.
+ODE solved in 55 steps
+ODE RK45 integration
+Bad step at x=3.34543466482784. Step rejected.
+ODE solved in 55 steps

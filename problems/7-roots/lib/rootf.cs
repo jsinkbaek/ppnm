@@ -32,7 +32,7 @@ public class rootf
 
 			// backtracking linesearch algorithm (first failing is good, second is step out try again)
 			while(f(x+lam*Dx).norm2() > fx.norm2()*(1-lam/2) & lam > 1.0/64) lam /= 2;
-			// norm2 is an euclidean vector norm I implemented
+			// norm2 is an euclidean vector norm by its definition, with over/underflow potential
 			// Update values
 			x = x + lam*Dx;
 			fx = f(x);

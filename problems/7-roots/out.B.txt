@@ -1,0 +1,23 @@
+
+----------------------------------------------------------------
+
+Problem 7B
+
+Shooting method of hydrogen SEQ ODE by rootfinding of auxiliary func M
+Initial ODE step:                   	0.001
+ODE accuracy goal:			1E-06
+ODE relative accuracy goal:		1E-06
+ODE starting x:				0.001
+ODE end x:				20
+rootf started at epsilon:		-0.47
+rootf accuracy goal:			0.001
+Found root of M(epsilon):           	-0.499999955890138
+Value of M at root:		        0.000161541912809724
+Analytical root:			-0.5
+Deviation from analytical result:	-4.41098615411306E-08
+
+
+See PlotB.svg for plot of solution and analytical function
+
+----------------------------------------------------------------
+

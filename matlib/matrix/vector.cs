@@ -77,11 +77,48 @@ public double norm(){
 	return meanabs*sum;
 	}
 
-public double norm2()
-{// euclidean norm2
+public double norm2(bool check=false)
+{// euclidean norm2 by definition, with over/underflow potential
+	double res_temp=0;
 	double res=0;
-	for (int i=0; i<this.size; i++)
-		res += this[i]*this[i];
+	bool floaterr = false;
+	if (check)
+	{// check if float rounding (if check=true)
+		for (int i=0; i<this.size; i++)
+		{
+			res_temp = res + this[i]*this[i];
+			if (res_temp != res)
+			{
+				res = res_temp;
+			}
+			else
+			{
+				floaterr = true;
+				System.Console.Error.WriteLine("vector.norm2() double arithmetic rounding");
+				break;
+			}
+		}
+		if (floaterr)
+		{
+			System.Console.Error.WriteLine("returning vector.norm() instead. Check result");
+			return this.norm();
+		}
+	}
+	else
+	{
+		for (int i=0; i<this.size; i++)
+		{
+			res += this[i]*this[i];
+		}
+	}
+
+	if (double.IsInfinity(res))
+	{// Check if over/underflowed regardless of bool check
+		System.Console.Error.WriteLine("vector.norm2() double over/underflowed");
+		System.Console.Error.WriteLine("returning vector.norm() instead. Check result");
+		return this.norm();
+	}
+	
 	return Sqrt(res);
 }
 
