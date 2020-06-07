@@ -47,7 +47,7 @@ public class rootf
 	} // newton
 
 
-	public static matrix jacobian(
+	static matrix jacobian(
 			Func<vector, vector> f, // func f
 			vector x, 		// starting values x
 			vector fx,		// f evaluated at starting values x
