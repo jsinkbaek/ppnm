@@ -1,0 +1,27 @@
+
+--------------------------------------------------------------
+
+Problem 8A:
+
+minimization.qnewton exit details found in A/out.err.txt
+
+Looking for minimum of Rosenbrock valley function
+Starting point:			(0, 0)
+Accuracy goal acc:          	0.0001
+Known 1 minimum:         	(1, 1)
+Found minimum:              	(0.99996929165722, 0.999938423241137)
+Value of function at minimum:  	9.45594941349832E-10
+Number of steps:		31
+
+
+Looking for a minimum of Himmelblau's function
+Starting point:			(0, 0)
+Known 4 minima:			( 3.0000,  2.0000) (-2.8051, 3.1313)
+				(-3.7793, -3.2832) (3.5844, -1.8481)
+Accuracy goal acc:          	0.0001
+Found minimum:              	(2.9999999141462, 2.00000002253858)
+Value of function at minimum:  	2.42657684471722E-13
+Number of steps:		10
+
+--------------------------------------------------------------
+

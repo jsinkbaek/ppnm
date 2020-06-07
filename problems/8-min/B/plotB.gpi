@@ -1,0 +1,9 @@
+set term svg font ",16" background rgb "white"
+set title "Higgs boson Breit-Wigner fit"
+#set key rmargin
+set xlabel "Energy [GeV]"
+set ylabel "Cross section [Arbitrary units]"
+set out "PlotB.svg"
+
+plot "out.fit.txt" u 1:2 with lines lw 3 dt 3 lt -1 title "Fit by chi² minimization"\
+	, "higgs.dat" u 1:2:3 with yerrorbars title "Data" 

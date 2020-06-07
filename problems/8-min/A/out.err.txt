@@ -1,0 +1,16 @@
+
+minimization.qnewton returning (x, nsteps)
+gradx.norm2()		4.84699632168444E-05
+acc			0.0001
+nsteps / limit		31 / 999
+Dx.norm2()		4.92338382669726E-06
+eps*x.norm2()		3.37159230022519E-07
+
+
+minimization.qnewton returning (x, nsteps)
+gradx.norm2()		2.32636224415356E-06
+acc			0.0001
+nsteps / limit		10 / 999
+Dx.norm2()		3.76125481138829E-06
+eps*x.norm2()		8.59630397923343E-07
+

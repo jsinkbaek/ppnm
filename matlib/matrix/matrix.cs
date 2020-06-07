@@ -145,6 +145,11 @@ public static matrix outer(vector u, vector v){
 	return c;
 }
 
+public void update(vector u, vector v, double s=1){
+	for(int i=0;i<size1;i++)
+	for(int j=0;j<size2;j++)
+		this[i,j]+=u[i]*v[j]*s;
+	}
 
 public matrix copy(){
 	matrix c = new matrix(size1,size2);

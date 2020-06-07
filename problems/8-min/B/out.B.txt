@@ -1,0 +1,19 @@
+
+--------------------------------------------------------------
+
+Problem 8B:
+
+minimization.qnewton exit details found in B/out.err.txt
+See PlotB.svg for plot of result
+
+Fitting Higgs data to Breit-Wigner formula
+by minimizing Chi² deviation function between formula and data.
+Found mass:		125.972186477549
+Found width:		2.08632251107198
+Found A:		9.8761740186468
+Reduced chi² val:	0.895650392623777
+Minimization steps:	93
+Minimization acc:	0.0001
+
+--------------------------------------------------------------
+
