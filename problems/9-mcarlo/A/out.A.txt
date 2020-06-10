@@ -1,0 +1,37 @@
+
+--------------------------------------------------------------
+
+Problem 9A:
+
+Calculating monte-carlo integral [0, 2*PI] of Sin(x)²
+Starting point:				0.000000
+End point:				6.283185
+Expected result:	         	3.141593
+Found result:	              		3.206906
+Estimated error:	 	 	0.022239
+Deviation from expected:		0.065314
+Number of sample points used:		10000
+
+
+Calculating monte-carlo integral [0, 3]xyz of x²+y²+z²
+Starting point:				(0, 0, 0)
+End point:				(3, 3, 3)
+Expected result:	         	243.000000
+Found result:	              		245.238659
+Estimated error:	 	 	1.251951
+Deviation from expected:		2.238659
+Number of sample points used:		10000
+
+
+Calculating monte-carlo integral [0,PI]xyz
+(1-cos(x)*cos(y)*cos(z))^(-1) / PI^3
+Starting point:				(0, 0, 0)
+End point:				(3.14159265358979, 3.14159265358979, 3.14159265358979)
+Expected result:	         	1.393204
+Found result:	              		1.416959
+Estimated error:	 	 	0.041111
+Deviation from expected:		0.023755
+Number of sample points used:		10000
+
+--------------------------------------------------------------
+
