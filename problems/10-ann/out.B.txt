@@ -1,0 +1,12 @@
+
+--------------------------------------------------------------
+
+Problem 10B:
+
+See PlotB.svg for results
+
+Training complete on set of 30 evenly spaced values of Sin(x)
+Parameters and training feedback can be found in out.err.txt
+
+--------------------------------------------------------------
+
