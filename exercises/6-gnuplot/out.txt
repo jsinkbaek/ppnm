@@ -1,0 +1,2 @@
+Exercise 6A
+See Plot.erf.svg and Plot.gam.svg

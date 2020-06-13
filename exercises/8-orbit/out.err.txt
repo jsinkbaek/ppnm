@@ -1,0 +1,6 @@
+bad step: x=1.01678133638928
+bad step: x=1.01678133638928
+bad step: x=1.41320732983072
+bad step: x=0
+bad step: x=0
+ode.driver: nsteps>999

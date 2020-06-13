@@ -1,0 +1,12 @@
+set term svg font ",16" background rgb "white"
+set title "Gamma function"
+#set key rmargin
+set xlabel "x"
+set ylabel "y"
+set yrange [-5:5]
+set out "Plot.gam.svg"
+
+set key bottom right
+plot "out.gam.txt" u 1:2 with lines lw 2 title "Approximated error function"\
+	, "gam.tab.txt" u 1:2 with points pt 7 ps 0.6 title "Tabulated values"
+

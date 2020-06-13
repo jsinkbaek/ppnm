@@ -1,6 +1,8 @@
+set term svg font ",16" background rgb "white"
 set autoscale          # Scales axes automatically 
 unset log              # Remove any log-scaling
 unset label            # Remove any previous labels
+set out "force.svg"
 set xtic auto          
 set ytic auto
 set title "Force Deflection Data for a Beam and a Column"

@@ -1,5 +1,10 @@
-out.txt: main.exe
-	mono $< > $@
+all: out.txt PlotA.txt
+
+PlotA.txt: plotA.gpi aout
+	gnuplot $<
+
+out.txt aout b1out b2out b3out: main.exe
+	mono $< 1> $@ 2> out.err.txt
 	cat $@
 
 main.exe: main.cs a.cs b.cs matlib.dll
@@ -14,4 +19,4 @@ matlib.dll: $(SRC)
 	mcs $^ -target:library -out:$@
 
 clean:
-	rm -f *.exe out* log* *.dll
+	rm -f *.exe out* log* *.dll *.svg aout b*out

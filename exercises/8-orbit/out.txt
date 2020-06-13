@@ -1,0 +1,13 @@
+Exercise A
+Output given in file aout. See PlotA.svg
+
+
+Exercise B
+B.i
+Output given in file b1out
+
+B.ii
+Output given in file b2out
+
+B.iii
+Output given in file b3out
