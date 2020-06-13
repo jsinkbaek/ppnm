@@ -1,0 +1,18 @@
+ANN initialized with 3 neurons
+
+Training started for ANN to do interpolation
+
+minimization.qnewton returning (x, nsteps)
+gradx.norm2()		0.00991409694919432
+acc			1E-05
+nsteps / limit		3000 / 3000
+Dx.norm2()		2.46038235055839E-05
+eps*x.norm2()		2.11103945364647E-06
+
+Training complete
+ncalls = 37201
+nsteps = 3000
+Parameters for the network are:
+i=0, a=-0.00451125013194748, b=2.55555544071624, w=2.74433112672447
+i=1, a=3.13859231693524, b=-0.933962155342854, w=0.0576695298671572
+i=2, a=6.28848700197139, b=2.55538326516535, w=2.74512222064899

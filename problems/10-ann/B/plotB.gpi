@@ -1,0 +1,15 @@
+set term svg font ",16" background rgb "white"
+set title "Artificial Neural Network interpolation, derivative and integration estimate"
+#set key rmargin
+set xlabel "x"
+set ylabel "y"
+set out "PlotB.svg"
+
+#set key bottom left
+plot "out.reg.txt" u 1:2 with lines lw 2 title "a.n.n. interpolation of Sin(x)"\
+	, "out.reg.txt" u 1:3 with lines lw 3 dt 3 lt -1 title "Sin(x)"\
+	, "out.der.txt" u 1:2 with lines lw 2 title "estimate of Sin(x) derivative"\
+	, "out.der.txt" u 1:3 with lines lw 3 dt 2 lt -1 title "Cos(x)"\
+	, "out.int.txt" u 1:2 with lines lw 2 title "estimate of Sin(x) anti-derivative"\
+	, "out.int.txt" u 1:3 with lines lw 3 dt 4 lt -1 title "-Cos(x)+Cos(0)"
+

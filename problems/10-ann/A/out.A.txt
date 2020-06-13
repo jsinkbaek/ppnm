@@ -1,0 +1,11 @@
+
+--------------------------------------------------------------
+
+Problem 10A:
+
+See PlotA.svg for results
+
+Training completed on set of 30 evenly spaced values of Cos(x)
+Parameters and training results can be found in out.err.txt
+
+--------------------------------------------------------------

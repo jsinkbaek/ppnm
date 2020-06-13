@@ -1,0 +1,12 @@
+set term svg font ",16" background rgb "white"
+set title "Artificial Neural Network interpolation training"
+#set key rmargin
+set xlabel "x"
+set ylabel "y"
+set out "PlotA.svg"
+
+set key bottom left
+plot "out.train.txt" u 1:2 with lines lw 2 title "ANN on the 30 training points"\
+	, "out.train.txt" u 1:3 with lines lw 3 dt 3 lt -1 title "Cos(x) training points"\
+	, "out.test.txt" u 1:2 with lines lw 2 title "ANN on 300 test points after training"\
+	, "out.test.txt" u 1:3 with lines lw 3 dt 2 title "Cos(x) test points"
