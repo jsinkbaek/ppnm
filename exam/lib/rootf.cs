@@ -16,7 +16,6 @@ public class rootf
 			double eps=1e-3			// accuracy goal ||f(z)||<eps
 			)
 	{// Implements a 1-dimensional newton rootfinder of complex functions with complex variables
-		int n = 1;
 		int nsteps = 0;
 		complex fz = f(z);
 		double lam;

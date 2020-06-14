@@ -15,14 +15,14 @@ out.txt out.zcalls.txt out.xycalls.txt: main.exe
 main.exe: main.cs math.dll
 	csc -out:$@ -reference:math.dll $<
 
-LIBDIR = ../matlib
+LIBDIR = matlib
 LOCALLIB = lib
 SRC := $(LIBDIR)/matrix/matrix.cs
 SRC += $(LIBDIR)/matrix/vector.cs
 SRC += $(LIBDIR)/complex/cmath.cs
 SRC += $(LIBDIR)/complex/complex.cs
 SRC += $(LOCALLIB)/rootf.cs
-SRC += ../problems/2-lineq/lib/linalg.cs
+SRC += $(LIBDIR)/linalg/linalg.cs
 
 math.dll: $(SRC)
 	csc -target:library -out:$@ $^
@@ -30,7 +30,7 @@ math.dll: $(SRC)
 
 .PHONY:clean
 clean:
-	rm -f *.svg *.exe out.*.txt *.dll
+	rm -f *.svg *.exe out.* *.dll
 
 
 
