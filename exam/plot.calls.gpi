@@ -1,0 +1,18 @@
+set term svg font ",16" background rgb "white"
+set out "Plot.calls.svg"
+#set multiplot layout 1,2 title "Root-finding efficiency for z² +5"
+set title "Root-finding efficiency comparison for z^p + 5"
+#set key rmargin
+set xlabel "Power p"
+set ylabel "Number"
+#set logscale y
+
+set key top left
+f(x) = x;
+
+plot "out.z.txt" u 1:2 with lines lw 2 title "1D complex function calls"\
+	, "out.xy.txt" u 1:2 with lines lw 2 title "2D real function calls"\
+	, "out.z.txt" u 1:3 with lines lw 2 dt 3 title "1D complex loop steps"\
+	, "out.xy.txt" u 1:3 with lines lw 2 dt 2 title "2D real loop steps"\
+	, f(x) title "y = 1*x" with lines lw 1 dt 2 lt -1
+

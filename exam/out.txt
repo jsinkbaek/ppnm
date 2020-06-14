@@ -1,0 +1,39 @@
+
+----------------------------------------------------------------
+
+
+Exam project 15 - complex rootfinding - Jeppe ST
+
+Doing complex 1D rootfinding of f = z^3 + 5 close to 0.5+0.1i
+Accuracy goal eps:                  0.001
+Analytical roots:                   -1.71+0i , 0.855+1.48i , -0.855+1.48i 
+Found root:                         0.855+1.48i
+Deviation:                          0.000+0.00i
+Value of function at root:          3.75e-06+-8e-06i
+Number of function calls:	    37
+Number of rootfinder steps:	    7
+
+Doing real 2D rootfinding of f = z^3 + 5 close to 0.5+0.1i
+Accuracy goal eps:                  0.001
+Analytical roots:                   -1.71+0i , 0.855+1.48i , -0.855+1.48i 
+Found root:                         0.855+1.48i
+Deviation:                          0.000+0.00i
+Value of function at root:          3.75e-06+-8e-06i
+Number of function calls:	    44
+Number of rootfinder steps:	    7
+
+
+In Plot.calls.svg, rootfinding efficiency for functions f(z) = z^p + 5 is compared.
+Here, starting conditions for z is generated as z0=1.1*(-5).pow(p)+0.2.
+Then, it is expected that the rootfinder finds the root (-5).pow(p).
+Shown is both: The amount of function (f(z)) calls necessary to find the root,
+and the amount of loop iterations required.
+Function calls and loop iterations scales linearly with function power p in both cases.
+But the 1D complex rootfinder makes fewer function calls than the multi-variable one.
+
+In Plot.time.svg, execution time is compared for the two. Here, both also scale
+linearly, but the 1D complex rootfinder is significantly faster. Most likely
+because it is more streamlined given its loss of generality.
+
+----------------------------------------------------------------
+

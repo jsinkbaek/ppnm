@@ -1,0 +1,15 @@
+set term svg font ",16" background rgb "white"
+set out "Plot.deviation.svg"
+#set multiplot layout 1,2 title "Root-finding efficiency for z² +5"
+set title "Root-finding deviation from closest root for z^p + 5"
+#set key rmargin
+set xlabel "Power p"
+set ylabel "Absolute deviation from closest root"
+set logscale y
+
+set key top left
+
+
+plot "out.z.txt" u 1:5 with lines lw 2 dt 2 title "1D complex"\
+	, "out.xy.txt" u 1:5 with lines lw 2 dt 3 title "2D real"
+
