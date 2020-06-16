@@ -1,15 +1,4 @@
 rootf.newton returning complex z, a condition is satisfied
-abs(f(z))		8.83589958068282E-06
-eps			0.001
-lam			1
-dz			1e-07+1e-07i
-rootf.newton returning x, a condition is satisfied
-f(x).norm2()          8.8357218289311E-06
-eps                   0.001
-lam                   1
-dx                    1E-07
-
-rootf.newton returning complex z, a condition is satisfied
 abs(f(z))		1.83277255752476E-09
 eps			0.001
 lam			1

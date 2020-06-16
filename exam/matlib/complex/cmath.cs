@@ -64,4 +64,8 @@ public static complex pow (this complex a, double x){
 public static complex pow (this complex a, complex b){
 	return exp(b*log(a)); }
 
+public static complex conj (complex a){
+	return new complex(a.Re, -a.Im);
+}
+
 }// cmath

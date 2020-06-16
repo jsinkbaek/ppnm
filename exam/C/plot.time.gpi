@@ -6,6 +6,7 @@ set title "Root-finding time efficiency comparison for z^p + 5"
 set xlabel "Power p"
 set ylabel "Execution time [ms]"
 #set logscale y
+set yrange [0:1.5]
 
 set key top left
 f(x) = x;

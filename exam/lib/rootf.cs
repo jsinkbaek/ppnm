@@ -7,15 +7,17 @@ using static linalg;
 
 public class rootf
 {
-	readonly complex i = new complex(0, 1);
+	static readonly complex i = new complex(0, 1);
 
 	public static (complex, int) newton(
 			Func<complex, complex> f,	// func takes z=x+iy returns complex f(z)
 			complex z,			// starting values of z
-			complex dz,			// finite difference used in numerical eval
+			complex dz,			// complex stepsize for numerical differentation
+			Func<complex, complex> df=null,	// derivative of f
 			double eps=1e-3			// accuracy goal ||f(z)||<eps
 			)
 	{// Implements a 1-dimensional newton rootfinder of complex functions with complex variables
+		// If df is not given, will instead be a quasi-newton method with finite-difference approx
 		int nsteps = 0;
 		complex fz = f(z);
 		double lam;
@@ -24,7 +26,9 @@ public class rootf
 		{
 			nsteps++;
 			// df/dz
-			complex dfdz = (f(z+dz) - fz)/dz;
+			complex dfdz;
+			if (df==null){dfdz = (f(z+dz) - fz)/dz;}
+			else {dfdz = df(z);}
 			// Dz = - f(z)/(df/dz)
 			complex Dz = -fz / dfdz;
 			// Lambda factor
@@ -86,7 +90,7 @@ public class rootf
                 Error.WriteLine($"lam                   {lam}");
                 Error.WriteLine($"dx                    {dx}\n");
                 return (x, nsteps);
-	}// newton real vector
+	}// qnewton real vector
 
 
 	static matrix jacobian(
@@ -113,5 +117,16 @@ public class rootf
                 }
                 return J;
         } // jacobian
+
+
+	public static (complex, int) qnewton(
+			Func<complex, complex> f,
+			complex z,
+			complex dz,
+			double eps=1e-3
+			)
+	{// Calls newton 1D complex rootf, specifying no derivative df (so uses finite differences)
+		return newton(f, z, dz:dz, df:null, eps:eps);
+	}
 
 }

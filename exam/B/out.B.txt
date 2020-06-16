@@ -1,0 +1,51 @@
+
+----------------------------------------------------------------
+
+
+Part B: Test of complex quasi-newton implementation
+
+Doing complex 1D qnewton rootf of f = sin(z)*exp(z) close to 1+0.1i
+Using finite difference approximation as derivative
+Accuracy goal eps:                  0.001
+Expected root:                      0+0i
+Found root:                         5.92e-05+5.39e-05i
+Deviation:                          0.000+0.00i
+Value of function at root:          5.92e-05+5.39e-05i
+Number of function calls:           14
+Number of rootfinder steps:         4
+
+Doing complex 1D newton rootf of f = sin(z)*exp(z) close to 1+0.1i
+Using analytical derivative exp(z)*(sin(z)+cos(z))
+Accuracy goal eps:                  0.001
+Expected root:	               	    0+0i
+Found root:                         5.92e-05+5.39e-05i
+Deviation:                          0.000+0.00i
+Value of function at root:          5.92e-05+5.39e-05i
+Number of function calls:           14
+Number of rootfinder steps:         4
+
+*************
+
+Doing complex 1D qnewton rootf of f = z* close to 1+1i
+Using finite-difference approximation as derivative
+Accuracy goal eps:                  0.001
+Analytical roots:                   0+0i
+Found root:                         5.84e-10+5.84e-10i
+Deviation:                          0.000+0.00i
+Value of function at root:          5.84e-10+-5.84e-10i
+Number of function calls:	    5
+Number of rootfinder steps:	    1
+
+Doing real 2D rootfinding of f = conj(z) close to 1+1i
+Using Jacobi matrix with finite difference approximation
+Accuracy goal eps:                  0.001
+Analytical roots:                   0+0i
+Found root:                         5.84e-10+5.84e-10i
+Deviation:                          0.000+0.00i
+Value of function at root:          5.84e-10+-5.84e-10i
+Number of function calls:           6
+Number of rootfinder steps:         1
+
+
+----------------------------------------------------------------
+

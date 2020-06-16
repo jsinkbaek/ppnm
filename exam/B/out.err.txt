@@ -1,0 +1,21 @@
+rootf.newton returning complex z, a condition is satisfied
+abs(f(z))		8.00800404524067E-05
+eps			0.001
+lam			1
+dz			1e-07+1e-07i
+rootf.newton returning complex z, a condition is satisfied
+abs(f(z))		8.00786087319044E-05
+eps			0.001
+lam			1
+dz			1e-07+1e-07i
+rootf.newton returning complex z, a condition is satisfied
+abs(f(z))		8.25712566077273E-10
+eps			0.001
+lam			1
+dz			1e-07+1e-07i
+rootf.newton returning x, a condition is satisfied
+f(x).norm2()          8.25712880095764E-10
+eps                   0.001
+lam                   1
+dx                    1E-07
+
