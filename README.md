@@ -28,3 +28,10 @@ Linux 4.15.0-66-generic
 
 Architecture:
 x86-64
+
+Folders:
+- exam: Contains examination problem
+- problems: Contains numerical methods problems
+- exercises: Contains practical programming exercises
+- lecture-exercises contains some notes from pprog exercise lectures
+- matlib: contains math library
